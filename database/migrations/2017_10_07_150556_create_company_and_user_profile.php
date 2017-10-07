@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use App\User;
 
-class CreateTypesTable extends Migration
+class CreateCompanyAndUserProfile extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +14,11 @@ class CreateTypesTable extends Migration
      */
     public function up()
     {
-        Schema::table('types', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('type');
-            $table->timestamps();
-        });
+        User::create([
+            'name' => 'Borislav',
+            'email' => 'bonevbb@gmail.com',
+            'password' => bcrypt('123456')
+        ]);
     }
 
     /**
@@ -27,6 +28,6 @@ class CreateTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('types');
+        User::where('email','bonevbb@gmail.com')->delete();
     }
 }
