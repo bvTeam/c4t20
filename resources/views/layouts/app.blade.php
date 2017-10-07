@@ -125,14 +125,14 @@
             <div class="container">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class=""><a href="job_list.html"><strong>Find a Job</strong></a></li>
-                        <li class=""><a href="resume_list.html"><strong>Find Resumes</strong></a></li>
-                        <li  class=""><a href="job_post_1.html"><strong>Post a Job</strong></a></li>
+                        <li class=""><a href="job_list.html"><strong>Търсене на работа</strong></a></li>
+                        <li class=""><a href="resume_list.html"><strong>Намерете кандидат</strong></a></li>
+                        <li  class=""><a href="job_post_1.html"><strong>Добавете публикация</strong></a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >Pages <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >Страници <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="about.html">За нас</a></li>
+                                <li><a href="contact.html">За контакти</a></li>
                                 <li><a href="blog.html">Articles &amp; Blog</a></li>
                                 <li><a href="terms_privacy.html">Terms &amp; Privacy</a></li>
                                 <li><a href="error_404.html">Error 404</a></li>
@@ -150,22 +150,10 @@
                                 <li><a href="company_page.html">Company Profile</a></li>
                             </ul>
                         </li>
-                        <li>
-                        <a href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                        Logout
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                        </form>
-                        </li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                     @guest
-
                         <li class="link-btn"><a href="{{ route('login') }}"><span class="btn btn-theme btn-pill btn-xs btn-line">Вход</span></a></li>
                         <li class="link-btn"><a href="{{ route('register') }}"><span class="btn btn-theme  btn-pill btn-xs btn-line">Регистрация</span></a></li>
                         @else
@@ -276,8 +264,8 @@
 <script src="assets/theme/js/theme.js"></script>
 
 <!-- maps -->
-{{--<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>--}}
-{{--<script src="assets/plugins/gmap3.min.js"></script>--}}
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDJzImGeQDu6f9dgfQi7ajycMqLXJPyd-w" type="text/javascript"></script>
+<script src="assets/plugins/gmap3.min.js"></script>
 <!-- maps single marker -->
 <script src="assets/theme/js/map-detail.js"></script>
 

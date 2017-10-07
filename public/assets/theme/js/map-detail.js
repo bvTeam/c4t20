@@ -57,7 +57,7 @@
 
       $(window).off('.affix')
       $('#affix-box').removeData('bs.affix').removeClass('affix affix-top affix-bottom');
-      initAffix();
+      // initAffix();
 
     });
   }
