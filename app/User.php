@@ -26,4 +26,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function type()
+    {
+        return $this->hasMany(TypesModel::class, 'type_id', 'id');
+    }
+
+    public function company()
+    {
+        return $this->hasMany(User::class, 'user_id', 'id');
+    }
 }
