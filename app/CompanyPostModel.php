@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CompanyPostModel extends Model
 {
-    protected $table = 'company_post';
+    protected $table = 'company_post as cp';
 
     protected $fillable = ['id', 'title', 'description', 'requirements', 'type_id', 'company_id', 'city'];
 

@@ -16,7 +16,7 @@ class CreateUserCvTable extends Migration
         Schema::create('user_cv', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->longText('description');
+            $table->longText('description')->nullable();
             $table->text('probation');
             $table->longText('education');
             $table->string('phone');
