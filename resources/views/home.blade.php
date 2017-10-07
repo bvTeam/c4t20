@@ -17,9 +17,9 @@
                                 <div class="form-group">
                                     <label>От какво се интересувате</label>
                                     <select class="form-control" name="choice">
-                                        <option>Стаж</option>
-                                        <option>Курс</option>
-                                        <option>Работа</option>
+                                        @foreach($types as $type)
+                                        <option value="{{$type->id}}">{{$type->type}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
