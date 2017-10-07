@@ -22,9 +22,9 @@
                             <div class="form-group">
                                 <label>От какво се интересувате</label>
                                 <select class="form-control" name="choice">
-                                    <option>Стаж</option>
-                                    <option>Курс</option>
-                                    <option>Работа</option>
+                                    @foreach($types as $type)
+                                    <option value="{{$type->id}}">{{$type->type}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -166,14 +166,15 @@
                             </div><!-- end desc top -->
 
                             <!-- item list -->
+                            @foreach($possitions as $possition)
                             <div class="box-list">
                                 <div class="item">
                                     <div class="row">
                                         <div class="col-md-1 hidden-sm hidden-xs"><div class="img-item"><img src="./assets/theme/images/company-logo/1.jpg" alt=""></div></div>
                                         <div class="col-md-11">
-                                            <h3 class="no-margin-top"><a href="{{url('post-details')}}?id=1" class="">Backend Developer <i class="fa fa-link color-white-mute font-1x"></i></a></h3>
-                                            <h5><span class="color-black">CollegeHumor</span> - <span class="color-white-mute">New York, NY 10011 (Chelsea area)</span></h5>
-                                            <p class="text-truncate ">Back-end development experience in PHP 5, and a strong understanding of Object Oriented Programming within an MVC framework</p>
+                                            <h3 class="no-margin-top"><a href="{{url('post-details')}}?id={{$possition->id}}" class="">{{$possition->title}} <i class="fa fa-link color-white-mute font-1x"></i></a></h3>
+                                            <h5><span class="color-black">Град</span> - <span class="color-white-mute">{{$possition->city}}</span></h5>
+                                            <p class="text-truncate ">{{$possition->description}}</p>
                                             <div>
                                                 <span class="color-white-mute">16 hours ago</span> -
                                                 <a href="#need-login" data-toggle="modal" class="btn btn-xs btn-theme btn-default">save job</a> -
@@ -183,88 +184,7 @@
                                         </div>
                                     </div>
                                 </div><!-- end item list -->
-
-                                <!-- item list -->
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-md-1 hidden-sm hidden-xs"><div class="img-item"><img src="./assets/theme/images/company-logo/2.jpg" alt=""></div></div>
-                                        <div class="col-md-11">
-                                            <h3 class="no-margin-top"><a href="job_details.html" class="">Software Developer/Analyst - Web Developer <i class="fa fa-link color-white-mute font-1x"></i></a></h3>
-                                            <h5><span class="color-black">University of Texas at Austin</span> - <span class="color-white-mute">Austin, TX</span></h5>
-                                            <p class="text-truncate ">Experience in an environment using a programming language such as PHP. To build and maintain websites for the College of Fine Arts</p>
-                                            <div>
-                                                <span class="color-white-mute">1 day ago</span> -
-                                                <a href="#need-login" data-toggle="modal" class="btn btn-xs btn-theme btn-default">save job</a> -
-                                                <a href="#modal-email" data-toggle="modal"  class="btn btn-theme btn-xs btn-default">email</a> -
-                                                <a href="#" class="btn btn-theme btn-xs btn-default">more ...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- end item list -->
-
-                                <!-- item list -->
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-md-1 hidden-sm hidden-xs"><div class="img-item"><img src="./assets/theme/images/company-logo/3.jpg" alt=""></div></div>
-                                        <div class="col-md-11">
-                                            <h3 class="no-margin-top"><a href="job_details.html" class="">Full Stack Web Developer, Internal Tools <i class="fa fa-link color-white-mute font-1x"></i></a></h3>
-                                            <h5><span class="color-black">Krossover</span> - <span class="color-white-mute">New York, NY 10011 (Chelsea area)</span></h5>
-                                            <p class="text-truncate "> PHP and/or Java. Architect features with the development team. Krossover is looking for a Web Application Developer to join our team of smart developers</p>
-                                            <div>
-                                                <span class="color-white-mute">15 minutes ago</span> -
-                                                <a href="#need-login" data-toggle="modal" class="btn btn-xs btn-theme btn-default">save job</a> -
-                                                <a href="#modal-email" data-toggle="modal"  class="btn btn-theme btn-xs btn-default">email</a> -
-                                                <a href="#" class="btn btn-theme btn-xs btn-default">more ...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- end item list -->
-
-                                <!-- item list -->
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-md-1 hidden-sm hidden-xs"><div class="img-item"><img src="./assets/theme/images/company-logo/4.jpg" alt=""></div></div>
-                                        <div class="col-md-11">
-                                            <h3 class="no-margin-top"><a href="job_details.html" class="">Entry Level - Software Engineer <i class="fa fa-link color-white-mute font-1x"></i></a></h3>
-                                            <h5><span class="color-black">Tektronix </span> - <span class="color-white-mute">Beaverton, OR</span></h5>
-                                            <p class="text-truncate ">Experience with PHP, Python, Perl, Ruby, Node.js, REST. Entry Level - Software Engineer.</p>
-                                            <div>
-                                                <span class="color-white-mute">3 days ago</span> -
-                                                <a href="#need-login" data-toggle="modal" class="btn btn-xs btn-theme btn-default">save job</a> -
-                                                <a href="#modal-email" data-toggle="modal"  class="btn btn-theme btn-xs btn-default">email</a> -
-                                                <a href="#" class="btn btn-theme btn-xs btn-default">more ...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- end item list -->
-
-                                <!-- item list -->
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-md-1 hidden-sm hidden-xs"><div class="img-item"><img src="./assets/theme/images/company-logo/5.jpg" alt=""></div></div>
-                                        <div class="col-md-11">
-                                            <h3 class="no-margin-top"><a href="job_details.html" class="">PHP Engineer <i class="fa fa-link color-white-mute font-1x"></i></a></h3>
-                                            <h5><span class="color-black">Shutterstock </span>
-                                                <span class="rate">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-half-o"></i>
-                            </span>
-                                                <a href="#">2,983 Reviews</a>
-                                                - <span class="color-white-mute"> New York, NY</span></h5>
-                                            <p class="text-truncate ">
-                                                SQL and PHP. Experience with PHP Storm IDE preferred. Our client is growing their team and is in immediate need of a PHP Developer.</p>
-                                            <div>
-                                                <span class="color-white-mute">3 days ago</span> -
-                                                <a href="#need-login" data-toggle="modal" class="btn btn-xs btn-theme btn-default">save job</a> -
-                                                <a href="#modal-email" data-toggle="modal"  class="btn btn-theme btn-xs btn-default">email</a> -
-                                                <a href="#" class="btn btn-theme btn-xs btn-default">more ...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- end item list -->
+                            @endforeach
 
 
                             </div>
