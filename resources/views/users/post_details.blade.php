@@ -14,7 +14,7 @@
                         <div>Job details :</div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="text-right"><a href="#">&laquo; Go back to job listings</a></div>
+                        <div class="text-right"><a href="{{url('joblist')}}">&laquo; Go back to job listings</a></div>
                     </div>
                 </div>
             </div>

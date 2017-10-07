@@ -27,5 +27,13 @@ Route::get('/joblist', function () {
 Route::get('/post-details', function () {
     return view('users.post_details');
 });
+
 //UserController
 //CompanyController
+Route::get('/cv-list', 'CvListController@cvList');
+
+
+Route::get('/create-post', function () {
+    return view('users.create-post');
+});
+

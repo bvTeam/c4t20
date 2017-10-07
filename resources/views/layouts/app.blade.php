@@ -125,31 +125,9 @@
             <div class="container">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class=""><a href="job_list.html"><strong>Търсене на работа</strong></a></li>
-                        <li class=""><a href="resume_list.html"><strong>Намерете кандидат</strong></a></li>
-                        <li  class=""><a href="job_post_1.html"><strong>Добавете публикация</strong></a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >Страници <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="about.html">За нас</a></li>
-                                <li><a href="contact.html">За контакти</a></li>
-                                <li><a href="blog.html">Articles &amp; Blog</a></li>
-                                <li><a href="terms_privacy.html">Terms &amp; Privacy</a></li>
-                                <li><a href="error_404.html">Error 404</a></li>
-                                <li><a href="shortcode.html">Short Code</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >Features <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="job_list.html">Find a Job</a></li>
-                                <li><a href="job_details.html">Job Details</a></li>
-                                <li><a href="resume_list.html">Find Resumes</a></li>
-                                <li><a href="resume_details.html">Resume Details</a></li>
-                                <li><a href="job_post_2.html">Post a Job</a></li>
-                                <li><a href="company_page.html">Company Profile</a></li>
-                            </ul>
-                        </li>
+                        <li class=""><a href="{{url('joblist')}}"><strong>Търсене на работа</strong></a></li>
+                        <li class=""><a href="{{url('cv-list')}}"><strong>Намерете кандидат</strong></a></li>
+                        <li  class=""><a href="{{url('create-post')}}"><strong>Добавете публикация</strong></a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
