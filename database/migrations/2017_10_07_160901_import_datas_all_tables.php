@@ -1,13 +1,15 @@
 <?php
 
+use App\CompanyPostModel;
+use App\TypesModel;
+use App\User;
+use App\UserCvModel;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use App\CompanyPostModel;
-use App\TypesModel;
-use App\UserCvModel;
+use App\CompanyModel;
 
-class ImportDatasInAllTables extends Migration
+class ImportDatasAllTables extends Migration
 {
     /**
      * Run the migrations.
@@ -17,9 +19,56 @@ class ImportDatasInAllTables extends Migration
     public function up()
     {
 
+        User::create([
+            'name' => 'Деляна Крумова',
+            'email' => 'DKrumova@abv.bg',
+            'password' => bcrypt('123456')
+        ]);
+
+        User::create([
+            'name' => 'Томи Иванов',
+            'email' => 'Ivanov@abv.bg',
+            'password' => bcrypt('123456')
+        ]);
+
+        User::create([
+            'name' => 'Крум Никифоров',
+            'email' => 'Krum@abv.bg',
+            'password' => bcrypt('123456')
+        ]);
+
+        User::create([
+            'name' => 'Анастасия Атанасова',
+            'email' => 'Atanasova@abv.bg',
+            'password' => bcrypt('123456')
+        ]);
+
+        CompanyModel::create([
+            'name' => 'securiscope',
+            'phone' => '0877332219',
+            'email' => 'securiscope@abv.com',
+            'address' => 'ул. "Дякон Игнатий" №19',
+            'city' => 'София'
+        ]);
+
+        CompanyModel::create([
+            'name' => 'codexive',
+            'phone' => '0881259468',
+            'email' => 'codexive@abv.bg',
+            'address' => 'ул. „Люляк“ 11, 7000 Пазара, Русе',
+            'city' => 'Русе'
+        ]);
+
+        CompanyModel::create([
+            'name' => 'coceptual',
+            'phone' => '0882389674',
+            'email' => 'coceptual@abv.bg',
+            'address' => '7013 Здравец Изток, Русе',
+            'city' => 'Русе'
+        ]);
 
         TypesModel::create([
-           'type' => 'Пълно работно време'
+            'type' => 'Пълно работно време'
         ]);
 
         TypesModel::create([
@@ -79,8 +128,8 @@ class ImportDatasInAllTables extends Migration
             'title' => 'безплатни курсове по програмиране',
             'description' => 'codexive организира безплатни курсове по програмиране за напълно начинаещи в гр. Русе от януари 2017 г. Целта е всеки, който има интерес към програмиране и технологии, да опита програмирането и се увери сам дали е за него и дали иска да се занимава сериозно. Повече програмисти и ИТ специалисти означава по-силна икономика и по-добър стандарт на живот в България, не само за ИТ специалистите, но и за всички останали.',
             'requirements' => 'няма',
-            'type_id' => 2,
-            'company_id' => 4,
+            'type_id' => 4,
+            'company_id' => 2,
             'city' => 'Русе'
         ]);
 
@@ -119,9 +168,6 @@ class ImportDatasInAllTables extends Migration
             'type_id' => 4,
             'education' => '2000 - 2004 ПГ по туризъм „Иван Павлов“ '
         ]);
-
-
-
     }
 
     /**
