@@ -136,7 +136,7 @@ class ImportDatasAllTables extends Migration
         UserCvModel::create([
             'user_id' => 1,
             'phone' => '0877465327',
-            'description' => '',
+            'description' => null,
             'probation' => 'няма',
             'type_id' => 3,
             'education' => '2007 - 2011 ПГ по строителство, архитектура и геодезия „Пеньо Пенев“ 2011 - 2015 Русенски университет "Ангел Кънчев"'
@@ -145,8 +145,8 @@ class ImportDatasAllTables extends Migration
         UserCvModel::create([
             'user_id' => 2,
             'phone' => '0877965823',
-            'description' => '',
-            'probation' => 'няма',
+            'description' => null,
+            'probation' => '2008 - 2016 Агенция ЩИТ',
             'type_id' => 1,
             'education' => '2003 - 2007 СОУ „Васил Левски“'
         ]);
@@ -154,8 +154,8 @@ class ImportDatasAllTables extends Migration
         UserCvModel::create([
             'user_id' => 3,
             'phone' => '0884568234',
-            'description' => '',
-            'probation' => 'няма',
+            'description' => null,
+            'probation' => '01.01.2017 - 06.01.2017 oltodesign',
             'type_id' => 2,
             'education' => '2009 - 2013 ПГ по туризъм „Иван Павлов“ 2013 - 2017 Софийски университет "Св. Климент Охридски"'
         ]);
@@ -163,10 +163,10 @@ class ImportDatasAllTables extends Migration
         UserCvModel::create([
             'user_id' => 4,
             'phone' => '0884123567',
-            'description' => '',
+            'description' => null,
             'probation' => 'няма',
             'type_id' => 4,
-            'education' => '2000 - 2004 ПГ по туризъм „Иван Павлов“ '
+            'education' => '2000 - 2004 ПГ по туризъм „Иван Павлов“ 2004 - 2008 Варненският свободен университет „Черноризец Храбър“'
         ]);
     }
 
