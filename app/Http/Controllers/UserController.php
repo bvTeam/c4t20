@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\CCVModel;
 use App\CompanyPostModel;
 use App\TypesModel;
 use Illuminate\Http\Request;
 use Happyr\LinkedIn\LinkedIn;
+use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
@@ -24,38 +26,21 @@ class UserController extends Controller
 
         $requirements = explode("-", $jobDetails->requirements);
 
-//        $linkedIn=new LinkedIn('77mpq4ed5ejtuu', 'Cg9XfO2KQWLN1ANy');
-////dd($user=$linkedIn->get('v1/people/~'));
-//        if ($request->candidate) {
-//
-//            //we know that the user is authenticated now. Start query the API
-//            $user=$linkedIn->get('v1/people/~');
-//            dd($user);
-////
-////            exit();
-////        } elseif ($linkedIn->hasError()) {
-////            dd('34256');
-////            echo "User canceled the login.";
-////            exit();
-//        }
-//
-//        if(!$linkedIn->isAuthenticated()) {
-//            $linkedIn = new LinkedIn('77mpq4ed5ejtuu', 'Cg9XfO2KQWLN1ANy');
-//
-//            $scope = 'r_basicprofile';
-//            $urlLinked = $linkedIn->getLoginUrl(['scope' => $scope]);
-//        }
-//
-//        $urlLinked = '';
-
         $linkedIn=new LinkedIn('77mpq4ed5ejtuu', 'Cg9XfO2KQWLN1ANy');
 
-        if ($linkedIn->isAuthenticated()) {
-            //we know that the user is authenticated now. Start query the API
-            $user=$linkedIn->get('v1/people/~');
-            echo "Welcome ".$user['firstName'];
+        if (request()->candidate) {
 
-            exit();
+            $user=$linkedIn->get('v1/people/~');
+
+
+            $data = [
+                'firstname' => $user['firstName'],
+                'lastname' => $user['lastName'],
+                'headline' => $user['headline'],
+                'url' => $user['siteStandardProfileRequest']['url']
+            ];
+        CCVModel::create($data);
+
         } elseif ($linkedIn->hasError()) {
             echo "User canceled the login.";
             exit();
@@ -63,8 +48,8 @@ class UserController extends Controller
 
         $url = $linkedIn->getLoginUrl();
 
-
-        return view('users.post_details',compact('jobDetails','url','requirements','urlLinked'));
+    $a = CCVModel::get();
+        return view('users.post_details',compact('jobDetails','url','linkedIn','requirements','urlLinked','a'));
     }
 
     public function linkedIn()

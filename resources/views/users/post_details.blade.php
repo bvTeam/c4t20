@@ -54,19 +54,38 @@
                             </ul>
                         </div><!-- end box item details -->
 
+                        <div class="box-list">
+
+                           <ul>
+                               @foreach($a as $b)
+                                   <li>{{$b->firstname}}</li>
+                                   {{$b->lastname}}
+                                   {{$b->headline}}
+                                   <a href="{{$b->url}}" target="_blank">link to Linkedin</a>
+                                   <br>
+                               @endforeach
+
+                           </ul>
+
                     </div>
                     <div class="col-md-3">
 
                         <!-- box affix right -->
                         <div class="block-section " id="affix-box">
                             <div class="text-right">
+                                @if($linkedIn->isAuthenticated())
+                                    <form action="">
+                                        <input type="submit" class="btn btn-theme btn-line dark btn-block-xs" style="margin-bottom: 10px" value="Aplly WIth Linkedin" name="candidate">
+                                        <input type="hidden" value="{{$jobDetails->id}}" name="id">
+                                        <input type="hidden" value="{{$jobDetails->company->email}}" name="email">
+
+                                    </form>
+                                @else
                                 <p><a href="{{url($url)}}" class="btn btn-theme btn-line dark btn-block-xs">Aplly WIth Linkedin</a>
-                                <form action="">
-                                    <input type="submit" value="candidate" name="candidate">
-                                </form>
                                 </p>
-                                <p><a href="#modal-apply"  data-toggle="modal" class="btn btn-theme btn-t-primary btn-block-xs">Apply This Job</a></p>
-                                <p><a href="#" class="btn btn-theme btn-t-primary btn-block-xs">Login to Save This Job</a></p>
+                                @endif
+                                {{--<p><a href="#modal-apply"   data-toggle="modal" class="btn btn-theme btn-t-primary btn-block-xs">Apply This Job</a></p>--}}
+                                {{--<p><a href="#" class="btn btn-theme btn-t-primary btn-block-xs">Login to Save This Job</a></p>--}}
                                 <p><a href="#map-toogle" id="btn-map-toogle" data-toggle="collapse" class="btn btn-theme btn-t-primary btn-block-xs">Ofice Location</a></p>
                                 <p>Share This Job <span class="space-inline-10"></span> :</p>
                                 <p class="share-btns">

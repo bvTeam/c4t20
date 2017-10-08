@@ -46,7 +46,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         @hasrole('writer')
-                        <li class=""><a href="{{url('joblist')}}"><strong>Търсене на работа</strong></a></li>
+                        <li class=""><a href="{{url('joblist')}}"><strong>Търсене</strong></a></li>
                         @endhasrole
                         @hasrole('company')
                         <li class=""><a href="{{url('cv-list')}}"><strong>Намерете кандидат</strong></a></li>

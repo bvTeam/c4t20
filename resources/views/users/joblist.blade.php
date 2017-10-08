@@ -166,6 +166,7 @@
                             </div><!-- end desc top -->
 
                             <!-- item list -->
+                            @if($possitions->count() != 0)
                             @foreach($possitions as $possition)
                             <div class="box-list">
                                 <div class="item">
@@ -185,7 +186,17 @@
                                     </div>
                                 </div><!-- end item list -->
                             @endforeach
-
+                                @else
+                                    <div class="box-list">
+                                        <div class="item">
+                                            <div class="row">
+                                                <div class="col-md-1 hidden-sm hidden-xs"><div class="img-item"></div></div>
+                                                <div class="col-md-11">
+                                                    <h2>Моля изберете от какво се интересувате</h2>
+                                                </div>
+                                            </div>
+                                        </div><!-- end item list -->
+                            @endif
 
                             </div>
 
