@@ -118,47 +118,47 @@
                   @hasrole('company')
                   <!-- filter   -->
                   <div class="result-filter">
-                    <h5 class="no-margin-top font-bold margin-b-20 " ><a href="#s_collapse_1" data-toggle="collapse" >Education <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i></a> </h5>
+                    <h5 class="no-margin-top font-bold margin-b-20 " ><a href="#s_collapse_1" data-toggle="collapse" >Образование <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i></a> </h5>
                     <div class="collapse in" id="s_collapse_1">
                       <div class="list-area">
                         <ul class="list-unstyled">
                           <li>
-                            <a  href="#" >Doctorate</a> (16947)
+                            <a  href="#" >Докторанти</a> (16947)
                           </li>
                           <li>
-                            <a  href="#" >Masters</a> (13915)
+                            <a  href="#" >Магистри</a> (13915)
                           </li>
                           <li>
-                            <a  href="#" >Bachelors</a> (9398)
+                            <a  href="#" >Бакалаври</a> (9398)
                           </li>
                           <li>
                             <a  href="#" >Associates</a> (4112)
                           </li>
                           <li>
-                            <a  href="#" >Diploma</a> (1864)
+                            <a  href="#" >Средно образование</a> (1864)
                           </li>
                         </ul>
                       </div>
                     </div>
 
-                    <h5 class="font-bold  margin-b-20"  ><a href="#s_collapse_5" data-toggle="collapse" >Years of work experience <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i></a> </h5>
+                    <h5 class="font-bold  margin-b-20"  ><a href="#s_collapse_5" data-toggle="collapse" >Стаж <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i></a> </h5>
                     <div class="collapse in" id='s_collapse_5'>
                       <div class="list-area">
                         <ul class="list-unstyled ">
                           <li>
-                            <a  href="#" >Less than 1 year </a> (558)
+                            <a  href="#" >По-малко от 1 година</a> (558)
                           </li>
                           <li>
-                            <a  href="#" >1-2 years </a> (438)
+                            <a  href="#" >1-2 години </a> (438)
                           </li>
                           <li>
-                            <a  href="#" >3-5 years </a> (313)
+                            <a  href="#" >3-5 години </a> (313)
                           </li>
                           <li>
-                            <a  href="#" >6-10 years</a> (169)
+                            <a  href="#" >6-10 години</a> (169)
                           </li>
                           <li>
-                            <a  href="#" >More than 10 years  </a> (156)
+                            <a  href="#" >Повече от 10 години </a> (156)
                           </li>
                         </ul>
 
@@ -171,22 +171,19 @@
                       <div class="list-area">
                         <ul class="list-unstyled ">
                           <li>
-                            <a  href="#" >Software Engineer</a> (558)
+                            <a  href="#" >Софтуерен инженер</a> (558)
                           </li>
                           <li>
-                            <a  href="#" >PHP Developer</a> (438)
+                            <a  href="#" >PHP разработчик</a> (438)
                           </li>
                           <li>
-                            <a  href="#" >Software Engineer </a> (313)
+                            <a  href="#" >Софтуерен инженер </a> (313)
                           </li>
                           <li>
-                            <a  href="#" >Senior Software Engineer </a> (169)
+                            <a  href="#" >Старши софтуерен инженер </a> (169)
                           </li>
                           <li>
-                            <a  href="#" >Front End Developer </a> (156)
-                          </li>
-                          <li>
-                            <a  href="#" >More ... </a>
+                            <a  href="#" >Front End Разработчик </a> (156)
                           </li>
                         </ul>
 
@@ -199,22 +196,19 @@
                       <div class="list-area">
                         <ul class="list-unstyled ">
                           <li>
-                            <a  href="#" >Self Employed</a> (558)
+                            <a  href="#" >Самоосигуряващ се</a> (558)
                           </li>
                           <li>
-                            <a  href="#" >Freelance</a> (438)
+                            <a  href="#" >Свободна практика</a> (438)
                           </li>
                           <li>
                             <a  href="#" >IBM </a> (313)
                           </li>
                           <li>
-                            <a  href="#" >Bank of America </a> (169)
+                            <a  href="#" >Банка на Америка</a> (169)
                           </li>
                           <li>
-                            <a  href="#" >The University of Texas at Austin </a> (156)
-                          </li>
-                          <li>
-                            <a  href="#" >More ... </a>
+                            <a  href="#" >Русенски университет "Ангел Кънчев" </a> (156)
                           </li>
                         </ul>
 
@@ -240,9 +234,6 @@
                           </li>
                           <li>
                             <a  href="#" >Austin, TX  </a> (156)
-                          </li>
-                          <li>
-                            <a  href="#" >More ... </a>
                           </li>
                         </ul>
 

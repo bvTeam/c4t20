@@ -24,31 +24,47 @@ class UserController extends Controller
 
         $requirements = explode("-", $jobDetails->requirements);
 
-        $linkedIn=new LinkedIn('77mpq4ed5ejtuu', 'Cg9XfO2KQWLN1ANy');
-//dd($user=$linkedIn->get('v1/people/~'));
-        if ($request->candidate) {
+//        $linkedIn=new LinkedIn('77mpq4ed5ejtuu', 'Cg9XfO2KQWLN1ANy');
+////dd($user=$linkedIn->get('v1/people/~'));
+//        if ($request->candidate) {
+//
+//            //we know that the user is authenticated now. Start query the API
+//            $user=$linkedIn->get('v1/people/~');
+//            dd($user);
+////
+////            exit();
+////        } elseif ($linkedIn->hasError()) {
+////            dd('34256');
+////            echo "User canceled the login.";
+////            exit();
+//        }
+//
+//        if(!$linkedIn->isAuthenticated()) {
+//            $linkedIn = new LinkedIn('77mpq4ed5ejtuu', 'Cg9XfO2KQWLN1ANy');
+//
+//            $scope = 'r_basicprofile';
+//            $urlLinked = $linkedIn->getLoginUrl(['scope' => $scope]);
+//        }
+//
+//        $urlLinked = '';
 
+        $linkedIn=new LinkedIn('77mpq4ed5ejtuu', 'Cg9XfO2KQWLN1ANy');
+
+        if ($linkedIn->isAuthenticated()) {
             //we know that the user is authenticated now. Start query the API
             $user=$linkedIn->get('v1/people/~');
-            dd($user);
-//
-//            exit();
-//        } elseif ($linkedIn->hasError()) {
-//            dd('34256');
-//            echo "User canceled the login.";
-//            exit();
+            echo "Welcome ".$user['firstName'];
+
+            exit();
+        } elseif ($linkedIn->hasError()) {
+            echo "User canceled the login.";
+            exit();
         }
 
-        if(!$linkedIn->isAuthenticated()) {
-            $linkedIn = new LinkedIn('77mpq4ed5ejtuu', 'Cg9XfO2KQWLN1ANy');
+        $url = $linkedIn->getLoginUrl();
 
-            $scope = 'r_basicprofile';
-            $urlLinked = $linkedIn->getLoginUrl(['scope' => $scope]);
-        }
 
-        $urlLinked = '';
- 
-        return view('users.post_details',compact('jobDetails','requirements','urlLinked'));
+        return view('users.post_details',compact('jobDetails','url','requirements','urlLinked'));
     }
 
     public function linkedIn()

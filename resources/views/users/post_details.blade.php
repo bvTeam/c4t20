@@ -36,22 +36,22 @@
                                 </div>
                             </div>
 
-                            {{--<h2 class="title"><a href="#">{{$jobDetails->title}}</a></h2>--}}
-                            {{--<div class="job-meta">--}}
-                                {{--<ul class="list-inline">--}}
-                                    {{--<li><i class="fa fa-briefcase"></i> Договор за {{$jobDetails->type->type}}</li>--}}
-                                    {{--<li><i class="fa fa-map-marker"></i> България, {{$jobDetails->city}}</li>--}}
-                                    {{--<li><i class="fa fa-money"></i> $50k - $140k</li>--}}
-                                {{--</ul>--}}
-                            {{--</div>--}}
-                            {{--<p>{{$jobDetails->description}}</p>--}}
+                            <h2 class="title"><a href="#">{{$jobDetails->title}}</a></h2>
+                            <div class="job-meta">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-briefcase"></i> Договор за {{$jobDetails->type->type}}</li>
+                                    <li><i class="fa fa-map-marker"></i> България, {{$jobDetails->city}}</li>
+                                    <li><i class="fa fa-money"></i> $50k - $140k</li>
+                                </ul>
+                            </div>
+                            <p>{{$jobDetails->description}}</p>
 
-                            {{--<h4>Какво търсим:</h4>--}}
-                            {{--<ul>--}}
-                                {{--@foreach($requirements as  $requirement)--}}
-                                {{--<li>{{$requirement}}</li>--}}
-                                {{--@endforeach--}}
-                            {{--</ul>--}}
+                            <h4>Какво търсим:</h4>
+                            <ul>
+                                @foreach($requirements as  $requirement)
+                                <li>{{$requirement}}</li>
+                                @endforeach
+                            </ul>
                         </div><!-- end box item details -->
 
                     </div>
@@ -60,8 +60,8 @@
                         <!-- box affix right -->
                         <div class="block-section " id="affix-box">
                             <div class="text-right">
-                                <p><a href="{{$urlLinked}}" class="btn btn-theme btn-line dark btn-block-xs">Aplly WIth Linkedin</a>
-                                <form action="{{$urlLinked}}">
+                                <p><a href="{{url($url)}}" class="btn btn-theme btn-line dark btn-block-xs">Aplly WIth Linkedin</a>
+                                <form action="">
                                     <input type="submit" value="candidate" name="candidate">
                                 </form>
                                 </p>
