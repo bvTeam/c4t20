@@ -115,7 +115,7 @@
                     </div>
                   </div>
 
-
+                  @hasrole('company')
                   <!-- filter   -->
                   <div class="result-filter">
                     <h5 class="no-margin-top font-bold margin-b-20 " ><a href="#s_collapse_1" data-toggle="collapse" >Education <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i></a> </h5>
@@ -250,6 +250,7 @@
                     </div>
 
                   </div><!-- end filter   -->
+                  @endhasrole
                 </div>
 
 

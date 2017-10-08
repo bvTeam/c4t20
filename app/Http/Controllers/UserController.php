@@ -23,7 +23,7 @@ class UserController extends Controller
 
 
         $requirements = explode("-", $jobDetails->requirements);
- 
+
         return view('users.post_details',compact('jobDetails','requirements'));
     }
 }
