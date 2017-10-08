@@ -30,6 +30,6 @@ class CreateTablePostAnswer extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('post_answer');
     }
 }

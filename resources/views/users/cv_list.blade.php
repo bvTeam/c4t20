@@ -17,11 +17,11 @@
                   <!-- top desc -->
                   <div class="row hidden-xs">
                     <div class="col-sm-6 ">
-                      <p><strong class="color-black">PHP resumes in United States</strong></p>
+                      <p><strong class="color-black">Списък с кандидати за работа</strong></p>
                     </div>
                     <div class="col-sm-6">
                       <p class="text-right">
-                        Jobs 1 to 10 of 578
+                        {{--Jobs 1 to 10 of 578--}}
                       </p>
                     </div>
                   </div><!-- end top desc -->
@@ -106,11 +106,11 @@
                   <!-- filter   -->
                   <div class="row">
                     <div class="col-xs-6">
-                      <p><strong>Sort by: </strong></p>
+                      <p><strong>Филтрирай </strong></p>
                     </div>
                     <div class="col-xs-6">
                       <p class="text-right">
-                        <strong>Relevance</strong> - <a href="#" class="link-black"><strong>Date</strong></a>
+                        {{--<strong>Relevance</strong> - <a href="#" class="link-black"><strong>Date</strong></a>--}}
                       </p>
                     </div>
                   </div>
@@ -132,7 +132,7 @@
                             <a  href="#" >Бакалаври</a> (9398)
                           </li>
                           <li>
-                            <a  href="#" >Associates</a> (4112)
+                            <a  href="#" >Служители</a> (4112)
                           </li>
                           <li>
                             <a  href="#" >Средно образование</a> (1864)
@@ -166,8 +166,8 @@
                     </div>
 
 
-                    <h5 class="font-bold  margin-b-20" ><a href="#s_collapse_2" data-toggle="collapse">Job Titles <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i> </a></h5>
-                    <div class="collapse in" id="s_collapse_2">
+                    <h5 class="font-bold  margin-b-20 hidden" ><a href="#s_collapse_2" data-toggle="collapse">Job Titles <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i> </a></h5>
+                    <div class="collapse in hidden" id="s_collapse_2">
                       <div class="list-area">
                         <ul class="list-unstyled ">
                           <li>
@@ -191,8 +191,8 @@
                     </div>
 
 
-                    <h5 class="font-bold  margin-b-20" ><a href="#s_collapse_3" data-toggle="collapse" >Companies <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i> </a> </h5>
-                    <div class="collapse in" id="s_collapse_3">
+                    <h5 class="font-bold  margin-b-20 hidden" ><a href="#s_collapse_3" data-toggle="collapse" >Companies <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i> </a> </h5>
+                    <div class="collapse in hidden" id="s_collapse_3">
                       <div class="list-area">
                         <ul class="list-unstyled ">
                           <li>
@@ -216,8 +216,8 @@
                     </div>
 
 
-                    <h5 class="font-bold  margin-b-20" ><a href="#s_collapse_4" class="collapsed" data-toggle="collapse" >Location <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i></a> </h5>
-                    <div class="collapse" id='s_collapse_4'>
+                    <h5 class="font-bold  margin-b-20 hidden" ><a href="#s_collapse_4" class="collapsed" data-toggle="collapse" >Location <i class="fa ic-arrow-toogle fa-angle-right pull-right"></i></a> </h5>
+                    <div class="collapse hidden" id='s_collapse_4'>
                       <div class="list-area">
                         <ul class="list-unstyled ">
                           <li>

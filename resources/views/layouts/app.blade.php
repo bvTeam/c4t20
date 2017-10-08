@@ -48,7 +48,7 @@
                         @hasrole('writer')
                         <li class=""><a href="{{url('joblist')}}"><strong>Търсене на работа</strong></a></li>
                         @endhasrole
-                        @hasrole('company')1
+                        @hasrole('company')
                         <li class=""><a href="{{url('cv-list')}}"><strong>Намерете кандидат</strong></a></li>
                         <li  class=""><a href="{{url('create-post')}}"><strong>Добавете публикация</strong></a></li>
                         @endhasrole

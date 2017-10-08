@@ -156,11 +156,11 @@
                             <!-- desc top -->
                             <div class="row hidden-xs">
                                 <div class="col-sm-6  ">
-                                    <p><strong class="color-black">PHP jobs in United States</strong></p>
+                                    <p><strong class="color-black">Обяви за работа</strong></p>
                                 </div>
                                 <div class="col-sm-6">
                                     <p class="text-right">
-                                        Jobs 1 to 10 of 578
+                                        {{--Jobs 1 to 10 of 578--}}
                                     </p>
                                 </div>
                             </div><!-- end desc top -->
@@ -240,7 +240,7 @@
                         <div class="block-section-sm side-right">
                             <div class="row">
                                 <div class="col-xs-6">
-                                    <p><strong>Sort by: </strong></p>
+                                    <p><strong>Филтриране </strong></p>
                                 </div>
                                 <div class="col-xs-6">
                                     <p class="text-right">

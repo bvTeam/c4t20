@@ -1,0 +1,11 @@
+.logo img {
+    display: none;
+}
+
+a.btn.btn-xs.btn-theme.btn-default {
+    display: none;
+}
+
+.get_alert {
+    display: none;
+}
