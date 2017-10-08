@@ -13,7 +13,8 @@
         "laravel/tinker": "~1.0",
         "php-http/curl-client": "^1.7",
         "php-http/guzzle6-adapter": "^1.1",
-        "php-http/message": "^1.6"
+        "php-http/message": "^1.6",
+        "spatie/laravel-permission": "^2.7"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

@@ -20,9 +20,9 @@ class UserController extends Controller
 
     public function jobDetails(Request $request)
     {
-        $jobDetails= [];
+        $jobDetails= CompanyPostModel::where('id', request()->id)->first();
 
-        $requirements = [];
+        $requirements = explode("-", $jobDetails->requirements);
 
         $linkedIn=new LinkedIn('77mpq4ed5ejtuu', 'Cg9XfO2KQWLN1ANy');
 //dd($user=$linkedIn->get('v1/people/~'));
@@ -54,8 +54,5 @@ class UserController extends Controller
     public function linkedIn()
     {
 
-
-
-//if not authenticated
     }
 }
