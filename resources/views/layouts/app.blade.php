@@ -125,7 +125,7 @@
             <div class="container">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class=""><a href="{{url('joblist')}}"><strong>Търсене на работа</strong></a></li>
+                        {{--<li class=""><a href="{{url('joblist')}}"><strong>Търсене на работа</strong></a></li>--}}
                         <li class=""><a href="{{url('cv-list')}}"><strong>Намерете кандидат</strong></a></li>
                         <li  class=""><a href="{{url('create-post')}}"><strong>Добавете публикация</strong></a></li>
                     </ul>

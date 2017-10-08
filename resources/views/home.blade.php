@@ -6,7 +6,7 @@
     <div class="hero-header">
         <div class="inner-hero-header">
             <div class="container">
-                <div class="text-center logo"><a href="index.html"><img src="assets/theme/images/logo.png" alt=""></a>
+                <div class="text-center logo"><a href="{{url('/')}}"><img src="assets/theme/images/logo.png" alt=""></a>
                 </div>
                 <div class="relative">
                     <i class="fa fa-globe ic-fade-globe"></i>

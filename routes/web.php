@@ -26,12 +26,12 @@ Route::get('/joblist', 'UserController@joblist');
 
 Route::get('/post-details', 'UserController@jobDetails');
 
-//UserController
-//CompanyController
 Route::get('/cv-list', 'CvListController@cvList');
 
 
 Route::get('/create-post', function () {
     return view('users.create-post');
 });
+
+Route::get('/linkedin', 'UserController@linkedIn');
 
